@@ -2,69 +2,45 @@
 import Layout from "../layouts/Layout.astro";
 import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
+import SplitSection from "../components/SplitSection.astro";
+import LieuImage from "../assets/images/le+clos+des+sens+juin+2022+salle-7.jpg";
+import JardinImage from "../assets/images/clos-des-sens-juillet-2023-jardin-115.jpg";
+import ChefImage from "../assets/images/Franck-Derouet.jpg";
 ---
 
 <Layout title="Un lieu | Le pavillon gourmand">
   <main>
-    <section id="hero" class="p-6 ">
+    <section id="hero" class="p-6">
       <Header />
     </section>
-    <section class="bg-blue-800 flex">
-      <div class="flex-1">
-        <h2>Un lieu</h2>
-         Univers singulier, identitaire et façonné par l'homme. Essences de bois
-        brulé, pierre de Savoie et cristal taillé, la salle, apaisante et
-        épurée, accueille l'authentique transparence réconfort
-      </div>
-      <div id="lieu" class="flex-1">test</div>
-    </section>
-    <section class="bg-blue-800 flex">
-      <div id="moment" class="flex-1">test</div>
-      <div class="flex-1">
-        <h2>Un moment</h2>
-         Par le prisme culinaire, entre pudeur et force vitale, le monde du
-        vivant s'exprime jusqu'à la quintessence. Sublimé, il livre son émotion
-        ultime
-      </div>
-    </section>
-    <section class="bg-blue-800 flex">
-      <div class="flex-1">
-        <h2>Nous trouver</h2>
-         Un lieu unique dans un écrin de nature.
-      </div>
-      <div id="nous-trouver" class="flex-1">test</div>
-    </section>
+    <SplitSection title="Un lieu" bgColor="#051528" bgImage={LieuImage}>
+      Univers singulier, identitaire et façonné par l'homme. Essences de bois
+      brulé, pierre de Savoie et cristal taillé, la salle, apaisante et épurée,
+      accueille l'authentique transparence réconfort.
+    </SplitSection>
+    <SplitSection
+      title="Le jardin"
+      bgColor="#051528"
+      bgImage={JardinImage}
+      isInverted
+    >
+      Inspiration quotidienne, dans son jus, le végétal s'exprime au gré du
+      temps, dans ses moindres mouvements, discret ou profus, libre d'être soi.
+    </SplitSection>
+    <SplitSection title="Esprits engagés" bgColor="#051528" bgImage={ChefImage}>
+      Épouser une identité unique, pousser jusqu'à l'ultime sa passion sensible
+      et émotionnelle, curieuse et libre d'être.
+    </SplitSection>
     <Footer />
   </main>
 </Layout>
 
 <style>
-  section {
+  #hero {
     width: 100%;
     height: 100vh;
-  }
-
-  #hero {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
       url("../assets/images/reportage-portraits-cuisine-salle-46.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-
-  #lieu {
-    background-image: url("../assets/images/le+clos+des+sens+juin+2022+salle-7.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-
-  #moment {
-    background-image: url("../assets/images/clos-des-sens-juillet-2023-plats-ecrevisse2.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-
-  #nous-trouver {
-    background-image: url("../assets/images/le+clos+des+sens+juin+2022+salle-7.jpg");
     background-repeat: no-repeat;
     background-size: cover;
   }
