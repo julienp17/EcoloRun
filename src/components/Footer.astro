@@ -6,32 +6,20 @@ import Michelin from "../assets/svgs/michelin-2023.svg"
 import EcoTable from "../assets/svgs/ecotable.svg"
 
 ---
-<foooter class="flex flex-col h-80" >
-  <section id="logos" class="flex-1 flex justify-center p-8">
-    <div class="flex gap-28">
-      <Image src={RelaisChateaux} alt="Gault Millau" />
-      <Image src={Michelin} alt="Michelin" />
-      <Image src={GaultMillau} alt="Gault Millau" />
-      <Image src={EcoTable} alt="Ecotable" />
-    </div>
-  </section>
-  <div class="flex-1 flex justify-between items-end h-80 p-4">
-    <div>
-      Le pavillon gourmand
-    </div>
-    <div>
-      mentions légales
-    </div>
+<footer class="bg-black flex flex-col w-full">
+  <div id="logos" class="flex justify-center items-center p-8 gap-4 md:gap-40">
+    <Image src={RelaisChateaux} alt="Relais & Châteaux" />
+    <Image src={Michelin} alt="Michelin 2023" />
+    <Image src={GaultMillau} alt="Gault&Millau"/>
+    <Image src={EcoTable} alt="Écotable"/>
   </div>
-</foooter>
+  <div class="text-white flex flex-row justify-between items-end h-40 p-8">
+    <p>Le pavillon gourmand</p>
+    <a href="#legal">mentions légales</a>
+  </div>
+</footer>
 
 <style>
-  footer {
-    width: 100%;
-
-    background-color: black;
-  }
-
   #logos {
     background-color: #1E1E1E
   }

@@ -1,0 +1,48 @@
+---
+import { Image } from "astro:assets";
+import Logo from '../assets/svgs/logo.svg'
+---
+<header>
+  <nav class="text-white p-6">
+    <div class="container flex justify-between items-center">
+      <a href="#" class="flex text-xl font-bold">
+        <Image src={Logo} alt="Le pavillon gourmand" class="h-8" />
+        Le pavillon gourmand
+      </a>
+      <div class="hidden md:flex space-x-4">
+        <a href="#lieu" class="nav-link" data-state="lieu">Un lieu</a>
+        <a href="#moment" class="nav-link" data-state="moment">Un moment</a>
+        <a href="#trouver" class="nav-link" data-state="trouver">Nous trouver</a>
+      </div>
+      <button class="md:hidden text-xl">
+        ☰
+      </button>
+    </div>
+  </nav>
+</header>
+
+<style>
+.nav-link {
+  position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: white;
+  transition: width 0.3s;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.active::after {
+  width: 100%;
+}
+</style>
