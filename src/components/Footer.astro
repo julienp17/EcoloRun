@@ -1,0 +1,38 @@
+---
+import { Image } from "astro:assets";
+import GaultMillau from "../assets/svgs/gault-millau.svg"
+import RelaisChateaux from "../assets/svgs/relais-chateaux.svg"
+import Michelin from "../assets/svgs/michelin-2023.svg"
+import EcoTable from "../assets/svgs/ecotable.svg"
+
+---
+<foooter class="flex flex-col h-80" >
+  <section id="logos" class="flex-1 flex justify-center p-8">
+    <div class="flex gap-28">
+      <Image src={RelaisChateaux} alt="Gault Millau" />
+      <Image src={Michelin} alt="Michelin" />
+      <Image src={GaultMillau} alt="Gault Millau" />
+      <Image src={EcoTable} alt="Ecotable" />
+    </div>
+  </section>
+  <div class="flex-1 flex justify-between items-end h-80 p-4">
+    <div>
+      Le pavillon gourmand
+    </div>
+    <div>
+      mentions légales
+    </div>
+  </div>
+</foooter>
+
+<style>
+  footer {
+    width: 100%;
+
+    background-color: black;
+  }
+
+  #logos {
+    background-color: #1E1E1E
+  }
+</style>
