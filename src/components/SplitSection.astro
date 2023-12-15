@@ -1,0 +1,17 @@
+---
+interface Props {
+  bgColor: string,
+  isInverted?: boolean
+}
+
+const { bgColor, isInverted = false } = Astro.props;
+---
+
+
+<section class=`flex ${bgColor}`>
+  <div class="flex-1">
+    <h2>Nous trouver</h2>
+    Un lieu unique dans un écrin de nature.
+  </div>
+  <div id="lieu" class="flex-1">test</div>
+</section>
