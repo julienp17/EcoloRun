@@ -4,7 +4,7 @@ import Logo from '../assets/svgs/logo.svg'
 ---
 <header>
   <nav class="text-white">
-    <div class="container flex justify-between items-center">
+    <div class="flex justify-between items-center relative">
       <a href="/" class="flex text-xl font-bold">
         <Image src={Logo} alt="Le pavillon gourmand" class="h-8" />
         Le pavillon gourmand
@@ -14,9 +14,20 @@ import Logo from '../assets/svgs/logo.svg'
         <a href="/moment" class="nav-link text-xl" data-state="moment">Un moment</a>
         <a href="/contact" class="nav-link text-xl" data-state="trouver">Nous trouver</a>
       </div>
-      <button class="md:hidden text-xl">
-        ☰
-      </button>
+
+      <label for="menu-toggle" class="cursor-pointer md:hidden block">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+        </svg>
+      </label>
+      <input type="checkbox" id="menu-toggle" class="hidden" />
+
+      <!-- Mobile menu items -->
+      <div id="menu" class="hidden md:hidden absolute top-full left-0 right-0 flex flex-col items-center space-y-4 py-4">
+        <a href="/lieu" class="nav-link hover:text-gray-300">Un lieu</a>
+        <a href="/moment" class="nav-link hover:text-gray-300">Un moment</a>
+        <a href="/contact" class="nav-link hover:text-gray-300">Nous trouver</a>
+      </div>
     </div>
   </nav>
 </header>
@@ -44,5 +55,9 @@ import Logo from '../assets/svgs/logo.svg'
 
 .active::after {
   width: 100%;
+}
+
+#menu-toggle:checked + #menu {
+  display: flex;
 }
 </style>
