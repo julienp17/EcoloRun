@@ -1,16 +1,16 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Footer from "../components/Footer.astro";
-import Header from "../components/Header.astro";
+import Hero from "../components/Hero.astro";
 import SplitSection from "../components/SplitSection.astro";
+import HeroImage from "../assets/images/reportage-portraits-cuisine-salle-46.jpg";
 import LieuImage from "../assets/images/le+clos+des+sens+juin+2022+salle-7.jpg";
 import MomentImage from "../assets/images/clos-des-sens-juillet-2023-plats-ecrevisse2.jpg";
 ---
 
 <Layout title="Le pavillon gourmand">
   <main>
-    <section id="hero" class="p-6 relative">
-      <Header />
+    <Hero bgImage={HeroImage}>
       <h1
         class="uppercase text-white font-bold text-3xl absolute bottom-20 left-10"
       >
@@ -22,7 +22,7 @@ import MomentImage from "../assets/images/clos-des-sens-juillet-2023-plats-ecrev
         <br />
          3* MICHELIN ANNECY
       </h1>
-    </section>
+    </Hero>
     <SplitSection title="Un lieu" bgColor="#051528" bgImage={LieuImage}>
       Univers singulier, identitaire et façonné par l'homme. Essences de bois
       brulé, pierre de Savoie et cristal taillé, la salle, apaisante et épurée,

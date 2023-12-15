@@ -1,0 +1,18 @@
+---
+import Header from "./Header.astro";
+
+interface Props {
+  bgImage: ImageMetadata;
+}
+
+const { bgImage } = Astro.props;
+---
+
+<section
+  id="hero"
+  class="p-6 relative bg-cover bg-center w-full h-screen"
+  style={`background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${bgImage.src})`}
+>
+  <Header />
+  <slot />
+</section>

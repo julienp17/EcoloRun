@@ -1,16 +1,15 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Footer from "../components/Footer.astro";
-import Header from "../components/Header.astro";
 import SplitSection from "../components/SplitSection.astro";
+import Hero from "../components/Hero.astro";
+import HeroImage from "../assets/images/clos-des-sens-sept-2018-reportage-77.jpg"
 import TerroirImage from "../assets/images/le+clos+des+sens+juin+2022+salle-37.jpg"
 ---
 
 <Layout title="Contact | Le pavillon gourmand">
   <main>
-    <section id="hero" class="p-6">
-      <Header />
-    </section>
+    <Hero bgImage={HeroImage}/>
     <SplitSection
       title="Accès"
       bgColor="#1E1E1E"

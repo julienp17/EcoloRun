@@ -1,8 +1,9 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Footer from "../components/Footer.astro";
-import Header from "../components/Header.astro";
 import SplitSection from "../components/SplitSection.astro";
+import Hero from "../components/Hero.astro";
+import HeroImage from "../assets/images/reportage-portraits-cuisine-salle-46.jpg";
 import LieuImage from "../assets/images/le+clos+des+sens+juin+2022+salle-7.jpg";
 import JardinImage from "../assets/images/clos-des-sens-juillet-2023-jardin-115.jpg";
 import ChefImage from "../assets/images/Franck-Derouet.jpg";
@@ -10,9 +11,7 @@ import ChefImage from "../assets/images/Franck-Derouet.jpg";
 
 <Layout title="Un lieu | Le pavillon gourmand">
   <main>
-    <section id="hero" class="p-6">
-      <Header />
-    </section>
+    <Hero bgImage={HeroImage} />
     <SplitSection title="Un lieu" bgColor="#051528" bgImage={LieuImage}>
       Univers singulier, identitaire et façonné par l'homme. Essences de bois
       brulé, pierre de Savoie et cristal taillé, la salle, apaisante et épurée,
@@ -34,14 +33,3 @@ import ChefImage from "../assets/images/Franck-Derouet.jpg";
     <Footer />
   </main>
 </Layout>
-
-<style>
-  #hero {
-    width: 100%;
-    height: 100vh;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-      url("../assets/images/reportage-portraits-cuisine-salle-46.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-</style>
