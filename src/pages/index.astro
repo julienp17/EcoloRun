@@ -6,9 +6,17 @@ import Header from "../components/Header.astro";
 
 <Layout title="Le pavillon gourmand">
   <main>
-    <section id="hero" >
+    <section id="hero" class="p-6 relative">
       <Header />
-      Restaurant gastronomique végétal & lacustre 3* MICHELIN ANNECY
+      <h1 class="uppercase text-white font-bold text-3xl absolute bottom-20 left-10">
+        Restaurant 
+        <br />
+        gastronomique 
+        <br />
+        Végétal & lacustre
+        <br />
+        3* MICHELIN ANNECY
+      </h1>
     </section>
     <section class="bg-blue-800 flex">
       <div class="flex-1">
@@ -46,7 +54,8 @@ import Header from "../components/Header.astro";
   }
 
   #hero {
-    background-image: url("../assets/images/reportage-portraits-cuisine-salle-46.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url("../assets/images/reportage-portraits-cuisine-salle-46.jpg");
     background-repeat: no-repeat;
     background-size: cover;
   }
