@@ -1,4 +1,5 @@
 ---
+import { Image } from "astro:assets";
 import Layout from "../layouts/Layout.astro";
 import Footer from "../components/Footer.astro";
 import SplitSection from "../components/SplitSection.astro";
@@ -6,6 +7,7 @@ import Hero from "../components/Hero.astro";
 import HeroImage from "../assets/images/reportage-portraits-cuisine-salle-46.jpg";
 import LieuImage from "../assets/images/le+clos+des+sens+juin+2022+salle-7.jpg";
 import JardinImage from "../assets/images/clos-des-sens-juillet-2023-jardin-115.jpg";
+import ReceptionImage from "../assets/images/clos-des-sens-juillet-2023-reception-24.jpg"
 import ChefImage from "../assets/images/Franck-Derouet.jpg";
 ---
 
@@ -27,8 +29,17 @@ import ChefImage from "../assets/images/Franck-Derouet.jpg";
       temps, dans ses moindres mouvements, discret ou profus, libre d'être soi.
     </SplitSection>
     <SplitSection title="Esprits engagés" bgColor="#051528" bgImage={ChefImage}>
-      Épouser une identité unique, pousser jusqu'à l'ultime sa passion sensible
-      et émotionnelle, curieuse et libre d'être.
+      <div slot="left" class="flex flex-col w-full h-full">
+        <div class="flex-1 flex items-center">
+          <div class="text-white p-8 md:p-16 max-w-xl text-lg leading-10">
+            <h2 class="uppercase font-bold text-3xl">Esprits Engagés</h2>
+            <p>Épouser une identité unique, pousser jusqu'à l'ultime sa passion sensible et émotionnelle, curieuse et libre d'être.</p>
+          </div>
+        </div>
+        <div class="flex-1">
+          <Image src={ReceptionImage} alt="Reception le pavillon gourmand" style="object-cover" />
+        </div>
+      </div>
     </SplitSection>
     <Footer />
   </main>
