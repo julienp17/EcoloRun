@@ -25,12 +25,40 @@ import ContactForm from "../components/ContactForm.astro";
         loading="lazy"
         referrerpolicy="no-referrer-when-downgrade"></iframe>
     </SplitSection>
-    <SplitSection
-      title="Contact"
-      bgColor="#000000"
-      bgImage={TerroirImage}
-    >
+    <SplitSection title="Contact" bgColor="#000000" bgImage={TerroirImage}>
       <ContactForm slot="left" />
+      <div
+        slot="right"
+        class="text-[#f2f2f2] p-8 md:p-16 max-w-xl text-lg leading-10"
+      >
+        <div class="mb-6">
+          <h2 class="uppercase font-bold text-3xl mb-2">Nous contacter</h2>
+          <a href="tel:+330450230790">Tél. : +33 (0)4 50 23 07 90</a>
+        </div>
+        <div>
+          <h2 class="uppercase font-bold text-3xl mb-2">Services</h2>
+          <ul>
+            <li class="flex justify-between">
+              <span>Mardi</span><span>soir</span>
+            </li>
+            <li class="flex justify-between">
+              <span>Mercredi</span><span>midi & soir</span>
+            </li>
+            <li class="flex justify-between">
+              <span>Jeudi</span><span>midi & soir</span>
+            </li>
+            <li class="flex justify-between">
+              <span>Vendredi</span><span>midi & soir</span>
+            </li>
+            <li class="flex justify-between">
+              <span>Samedi</span><span>midi & soir</span>
+            </li>
+            <li class="flex justify-between">
+              <span>Dimanche</span><span>midi</span>
+            </li>
+          </ul>
+        </div>
+      </div>
     </SplitSection>
     <Footer />
   </main>
