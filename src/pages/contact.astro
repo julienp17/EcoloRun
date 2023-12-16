@@ -5,6 +5,7 @@ import SplitSection from "../components/SplitSection.astro";
 import Hero from "../components/Hero.astro";
 import HeroImage from "../assets/images/clos-des-sens-sept-2018-reportage-77.jpg";
 import TerroirImage from "../assets/images/le+clos+des+sens+juin+2022+salle-37.jpg";
+import ContactForm from "../components/ContactForm.astro";
 ---
 
 <Layout title="Contact | Le pavillon gourmand">
@@ -25,24 +26,12 @@ import TerroirImage from "../assets/images/le+clos+des+sens+juin+2022+salle-37.j
         referrerpolicy="no-referrer-when-downgrade"></iframe>
     </SplitSection>
     <SplitSection
-      title="La cueillette"
+      title="Contact"
       bgColor="#000000"
       bgImage={TerroirImage}
     >
-      Inspiration quotidienne, dans son jus, le végétal s'exprime au gré du
-      temps, dans ses moindres mouvements, discret ou profus, libre d'être soi.
+      <ContactForm slot="left" />
     </SplitSection>
     <Footer />
   </main>
 </Layout>
-
-<style>
-  #hero {
-    width: 100%;
-    height: 100vh;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-      url("../assets/images/clos-des-sens-sept-2018-reportage-77.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-</style>

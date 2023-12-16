@@ -1,0 +1,86 @@
+<div class="bg-black text-white p-6 w-full max-w-3xl mx-auto">
+  <form id="contactForm" class="space-y-4">
+    <p class="text-white mb-4">
+      Les champs obligatoires sont marqués d'un astérisque
+    </p>
+    <div class="flex gap-4 mb-4">
+      <div class="w-1/2">
+        <label for="surname" class="block mb-2">Nom *</label>
+        <input
+          type="text"
+          id="surname"
+          name="surname"
+          required
+          class="w-full p-2 bg-transparent border border-white rounded text-white"
+        />
+      </div>
+      <div class="w-1/2">
+        <label for="name" class="block mb-2">Prénom *</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          required
+          class="w-full p-2 bg-transparent border border-white rounded text-white"
+        />
+      </div>
+    </div>
+
+    <div class="flex gap-4 mb-4">
+      <div class="w-1/2">
+        <label for="phone" class="block mb-2">Téléphone *</label>
+        <input
+          type="tel"
+          id="phone"
+          name="phone"
+          required
+          class="w-full p-2 bg-transparent border border-white rounded text-white"
+        />
+      </div>
+      <div class="w-1/2">
+        <label for="email" class="block mb-2">E-mail *</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          required
+          class="w-full p-2 bg-transparent border border-white rounded text-white"
+        />
+      </div>
+    </div>
+
+    <div class="mb-4">
+      <label for="message" class="block mb-2">Votre message *</label>
+      <textarea
+        id="message"
+        name="message"
+        required
+        class="w-full p-2 bg-transparent border border-white rounded text-white"
+        rows="4"></textarea>
+    </div>
+
+    <button type="submit" class="w-full p-3 bg-white text-black rounded"
+      >Nous contacter</button
+    >
+  </form>
+  <div id="successMessage" class="hidden mt-4">
+    <p class="text-green-500">Merci, votre email a bien été envoyé.</p>
+  </div>
+</div>
+
+<script type="module">
+  const form = document.getElementById('contactForm');
+  const successMessage = document.getElementById('successMessage');
+
+  if (form && successMessage) {
+    form.onsubmit = (event) => {
+      event.preventDefault(); // Prevent the form from submitting
+      setTimeout(() => {
+        if (form && successMessage) {
+          form.classList.add('hidden'); // Hide the form
+          successMessage.classList.remove('hidden'); // Show the success message
+        }
+      }, 1000); // Mock async delay of 1 second
+    };
+  }
+</script>
