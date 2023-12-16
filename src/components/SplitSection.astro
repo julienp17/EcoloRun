@@ -19,8 +19,8 @@ const { title, bgColor, bgImage, isInverted = false } = Astro.props;
       Astro.slots.has("left") ? (
         <slot name="left" />
       ) : (
-        <div class="text-[#f2f2f2] p-8 md:p-16 max-w-xl text-lg leading-10">
-          <h2 class="uppercase font-bold text-3xl mb-4">{title}</h2>
+        <div class="text-[#f2f2f2] font-open p-8 md:p-16 max-w-xl text-lg leading-10">
+          <h2 class="uppercase font-bold text-5xl mb-4 font-changa">{title}</h2>
           <slot />
         </div>
       )
