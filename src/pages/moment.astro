@@ -1,10 +1,16 @@
 ---
+import { Image } from "astro:assets";
 import Layout from "../layouts/Layout.astro";
-import Footer from "../components/Footer.astro";
-import HeroImage from "../assets/images/le+clos+des+sens+juin+2022+salle-37.jpg";
-import SplitSection from "../components/SplitSection.astro";
-import TerroirImage from "../assets/images/le+clos+des+sens+juin+2022+salle-37.jpg"
 import Hero from "../components/Hero.astro";
+import Footer from "../components/Footer.astro";
+import SplitSection from "../components/SplitSection.astro";
+import HeroImage from "../assets/images/le+clos+des+sens+juin+2022+salle-37.jpg";
+import TerroirImage from "../assets/images/le+clos+des+sens+juin+2022+salle-37.jpg";
+import Fenouille3Image from "../assets/images/clos-des-sens-juillet-2023-plats-fenouil3.jpg";
+import Fenouille6Image from "../assets/images/clos-des-sens-septembre-2021-plat-fenouille6.jpg";
+import LitAltesseImage from "../assets/images/le_clos_des_sens_juin_2022_plats_brochet_lie_d_altesse2.jpg";
+import EcrevisseImage from "../assets/images/plats_ecrevisse_froide.jpg";
+import CaveAVinImage from "../assets/images/matthieu_cellard_cave_et_vin.jpg";
 ---
 
 <Layout title="Un moment | Le pavillon gourmand">
@@ -17,6 +23,34 @@ import Hero from "../components/Hero.astro";
     >
       Reflet d'un garde-manger nourricier, la cuisine, brut et authentique
       dessine ses lignes dans ses courbes sauvages et charnelles sans contour.
+      <br />
+      <button
+        class="text-white border border-white px-4 py-2 transition duration-300 ease-in-out hover:bg-white hover:text-black mt-2"
+      >
+        <a href="/menu.pdf" target="_blank">Notre menu</a>
+      </button>
+      <div slot="right" class="grid grid-cols-2 grid-rows-2 w-full h-full">
+        <Image
+          src={Fenouille3Image}
+          alt="Fenouille"
+          class="w-full h-full object-cover"
+        />
+        <Image
+          src={Fenouille6Image}
+          alt="Fenouille"
+          class="w-full h-full object-cover"
+        />
+        <Image
+          src={LitAltesseImage}
+          alt="Lit d'altesse"
+          class="w-full h-full object-cover"
+        />
+        <Image
+          src={EcrevisseImage}
+          alt="Ecrevisse"
+          class="w-full h-full object-cover"
+        />
+      </div>
     </SplitSection>
     <SplitSection
       title="La cueillette"
@@ -32,9 +66,32 @@ import Hero from "../components/Hero.astro";
       bgColor="#251715"
       bgImage={TerroirImage}
     >
-      Explorer un territoire et rendre à la vigne la beauté des racines locales,
-      les cépages d'ici, écho aux flacons d'ailleurs, la pertinence d'une équipe
-      sommelière en totale cohérence
+      <div slot="left" class="flex flex-col w-full h-full">
+        <div class="flex-1 flex items-center">
+          <div class="text-white p-8 md:p-16 max-w-xl text-lg leading-10">
+            <h2 class="uppercase font-bold text-3xl">Esprits Engagés</h2>
+            <p>
+              xplorer un territoire et rendre à la vigne la beauté des racines
+              locales, les cépages d'ici, écho aux flacons d'ailleurs, la
+              pertinence d'une équipe sommelière en totale cohérence.
+            </p>
+            <br />
+            <button
+              class="text-white border border-white px-4 py-2 transition duration-300 ease-in-out hover:bg-white hover:text-black mt-2"
+            >
+              <a href="/carte-des-vins.pdf" target="_blank">La carte des vins</a
+              >
+            </button>
+          </div>
+        </div>
+        <div class="flex-1">
+          <Image
+            src={CaveAVinImage}
+            alt="Mathieu Cellard Cave à vin"
+            style="object-contain"
+          />
+        </div>
+      </div>
     </SplitSection>
     <Footer />
   </main>
