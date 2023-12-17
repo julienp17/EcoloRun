@@ -3,17 +3,20 @@ import Header from "./Header.astro";
 
 interface Props {
   currentPage?: string;
-  bgImage: ImageMetadata;
+  bgImage?: ImageMetadata;
 }
 
-const { currentPage = "", bgImage } = Astro.props;
+const { currentPage = "", bgImage = undefined } = Astro.props;
 ---
 
 <section
   id="hero"
-  class="p-6 relative bg-cover bg-center w-full h-screen"
-  style={`background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${bgImage.src})`}
+  class="p-6 relative bg-cover bg-center w-full h-screen overflow-hidden"
+  style={bgImage === undefined
+    ? ""
+    : `background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${bgImage.src})`}
 >
-  <Header currentPage={currentPage}/>
+  <slot name="background-images" />
+  <Header currentPage={currentPage} />
   <slot />
 </section>
