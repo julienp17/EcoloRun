@@ -11,6 +11,7 @@ import Fenouille6Image from "../assets/images/clos-des-sens-septembre-2021-plat-
 import LitAltesseImage from "../assets/images/le_clos_des_sens_juin_2022_plats_brochet_lie_d_altesse2.jpg";
 import EcrevisseImage from "../assets/images/plats_ecrevisse_froide.jpg";
 import CaveAVinImage from "../assets/images/matthieu_cellard_cave_et_vin.jpg";
+import CueilletteChampignon from "../assets/videos/cueillette_champignon.mp4";
 ---
 
 <Layout title="Un moment | Le pavillon gourmand">
@@ -60,6 +61,10 @@ import CaveAVinImage from "../assets/images/matthieu_cellard_cave_et_vin.jpg";
     >
       Inspiration quotidienne, dans son jus, le végétal s'exprime au gré du
       temps, dans ses moindres mouvements, discret ou profus, libre d'être soi.
+      <video slot="right" class="w-full h-full object-cover" autoplay muted loop>
+        <source src={CueilletteChampignon} type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
     </SplitSection>
     <SplitSection
       title="Verre du terroir"
@@ -69,13 +74,12 @@ import CaveAVinImage from "../assets/images/matthieu_cellard_cave_et_vin.jpg";
       <div slot="left" class="flex flex-col w-full h-full">
         <div class="flex-1 flex items-center">
           <div class="text-white p-8 md:p-16 max-w-xl text-lg leading-10">
-            <h2 class="uppercase font-bold text-3xl">Esprits Engagés</h2>
+            <h2 class="uppercase font-bold text-5xl mb-4 font-changa">Verre du terroir</h2>
             <p>
-              xplorer un territoire et rendre à la vigne la beauté des racines
+              Explorer un territoire et rendre à la vigne la beauté des racines
               locales, les cépages d'ici, écho aux flacons d'ailleurs, la
               pertinence d'une équipe sommelière en totale cohérence.
             </p>
-            <br />
             <button
               class="text-white border border-white px-4 py-2 transition duration-300 ease-in-out hover:bg-white hover:text-black mt-2"
             >
@@ -88,7 +92,7 @@ import CaveAVinImage from "../assets/images/matthieu_cellard_cave_et_vin.jpg";
           <Image
             src={CaveAVinImage}
             alt="Mathieu Cellard Cave à vin"
-            style="object-contain"
+            style="object-cover w-full h-full"
           />
         </div>
       </div>
