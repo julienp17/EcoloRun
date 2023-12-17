@@ -41,5 +41,52 @@ import ChefImage from "../assets/images/Franck-Derouet.jpg";
         />
       </div>
     </div>
+    <div slot="right" class="video-container relative w-full h-full overflow-hidden">
+      <iframe
+        class="youtube-video"
+        src="https://www.youtube.com/embed/uceaJ__FZg4?si=NNPNRCyKZDId-FHD"
+        title="YouTube video player"
+        width="100%"
+        height="100%"
+        frameborder="0"
+        allowfullscreen></iframe>
+      <Image
+        src={ChefImage}
+        alt="Franck Derout"
+        class="object-cover object-center w-full h-full"
+      />
+    </div>
   </SplitSection>
 </Layout>
+
+<style>
+  .video-container {
+    position: relative;
+    cursor: pointer;
+  }
+
+  .video-container .youtube-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+  }
+
+  .video-container img {
+    width: 100%;
+    height: auto;
+    transition: opacity 0.3s ease;
+  }
+
+  .video-container:hover .youtube-video {
+    opacity: 1;
+  }
+
+  .video-container:hover img {
+    opacity: 0;
+  }
+</style>
