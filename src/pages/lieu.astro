@@ -1,46 +1,45 @@
 ---
 import { Image } from "astro:assets";
 import Layout from "../layouts/Layout.astro";
-import Footer from "../components/Footer.astro";
 import SplitSection from "../components/SplitSection.astro";
 import Hero from "../components/Hero.astro";
+import LieuComponent from "../components/Lieu.astro";
 import HeroImage from "../assets/images/reportage-portraits-cuisine-salle-46.jpg";
-import LieuImage from "../assets/images/le+clos+des+sens+juin+2022+salle-7.jpg";
 import JardinImage from "../assets/images/clos-des-sens-juillet-2023-jardin-115.jpg";
-import ReceptionImage from "../assets/images/clos-des-sens-juillet-2023-reception-24.jpg"
+import ReceptionImage from "../assets/images/clos-des-sens-juillet-2023-reception-24.jpg";
 import ChefImage from "../assets/images/Franck-Derouet.jpg";
 ---
 
 <Layout title="Un lieu | Le pavillon gourmand">
-  <main>
-    <Hero currentPage="/lieu" bgImage={HeroImage} />
-    <SplitSection title="Un lieu" bgColor="#051528" bgImage={LieuImage}>
-      Univers singulier, identitaire et façonné par l'homme. Essences de bois
-      brulé, pierre de Savoie et cristal taillé, la salle, apaisante et épurée,
-      accueille l'authentique transparence réconfort.
-    </SplitSection>
-    <SplitSection
-      title="Le jardin"
-      bgColor="#051528"
-      bgImage={JardinImage}
-      isInverted
-    >
-      Inspiration quotidienne, dans son jus, le végétal s'exprime au gré du
-      temps, dans ses moindres mouvements, discret ou profus, libre d'être soi.
-    </SplitSection>
-    <SplitSection title="Esprits engagés" bgColor="#051528" bgImage={ChefImage}>
-      <div slot="left" class="flex flex-col w-full h-full">
-        <div class="flex-1 flex items-center">
-          <div class="text-white p-8 md:p-16 max-w-xl text-lg leading-10">
-            <h2 class="uppercase font-bold text-3xl">Esprits Engagés</h2>
-            <p>Épouser une identité unique, pousser jusqu'à l'ultime sa passion sensible et émotionnelle, curieuse et libre d'être.</p>
-          </div>
-        </div>
-        <div class="flex-1">
-          <Image src={ReceptionImage} alt="Reception le pavillon gourmand" style="object-cover" />
+  <Hero currentPage="/lieu" bgImage={HeroImage} />
+  <LieuComponent />
+  <SplitSection
+    title="Le jardin"
+    bgColor="#051528"
+    bgImage={JardinImage}
+    isInverted
+  >
+    Inspiration quotidienne, dans son jus, le végétal s'exprime au gré du temps,
+    dans ses moindres mouvements, discret ou profus, libre d'être soi.
+  </SplitSection>
+  <SplitSection title="Esprits engagés" bgColor="#051528" bgImage={ChefImage}>
+    <div slot="left" class="flex flex-col w-full h-full">
+      <div class="flex-1 flex items-center">
+        <div class="text-white p-8 md:p-16 max-w-xl text-lg leading-10">
+          <h2 class="uppercase font-bold text-3xl">Esprits Engagés</h2>
+          <p>
+            Épouser une identité unique, pousser jusqu'à l'ultime sa passion
+            sensible et émotionnelle, curieuse et libre d'être.
+          </p>
         </div>
       </div>
-    </SplitSection>
-    <Footer />
-  </main>
+      <div class="flex-1">
+        <Image
+          src={ReceptionImage}
+          alt="Reception le pavillon gourmand"
+          style="object-cover"
+        />
+      </div>
+    </div>
+  </SplitSection>
 </Layout>

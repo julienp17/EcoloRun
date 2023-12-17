@@ -14,88 +14,86 @@ import CueilletteChampignon from "../assets/videos/cueillette_champignon.mp4";
 ---
 
 <Layout title="Un moment | Le pavillon gourmand">
-  <main>
-    <Hero currentPage="/moment" bgImage={EcrevisseImage} />
-    <SplitSection
-      title="Âme végétale et lacustre"
-      bgColor="#251715"
-      bgImage={TerroirImage}
+  <Hero currentPage="/moment" bgImage={EcrevisseImage} />
+  <SplitSection
+    title="Âme végétale et lacustre"
+    bgColor="#251715"
+    bgImage={TerroirImage}
+  >
+    Reflet d'un garde-manger nourricier, la cuisine, brut et authentique dessine
+    ses lignes dans ses courbes sauvages et charnelles sans contour.
+    <br />
+    <button
+      class="text-white border border-white px-4 py-2 transition duration-300 ease-in-out hover:bg-white hover:text-black mt-2"
     >
-      Reflet d'un garde-manger nourricier, la cuisine, brut et authentique
-      dessine ses lignes dans ses courbes sauvages et charnelles sans contour.
-      <br />
-      <button
-        class="text-white border border-white px-4 py-2 transition duration-300 ease-in-out hover:bg-white hover:text-black mt-2"
-      >
-        <a href="/menu.pdf" target="_blank">Notre menu</a>
-      </button>
-      <div slot="right" class="grid grid-cols-2 grid-rows-2 w-full h-full">
-        <Image
-          src={Fenouille3Image}
-          alt="Fenouille"
-          class="w-full h-full object-cover"
-        />
-        <Image
-          src={Fenouille6Image}
-          alt="Fenouille"
-          class="w-full h-full object-cover"
-        />
-        <Image
-          src={LitAltesseImage}
-          alt="Lit d'altesse"
-          class="w-full h-full object-cover"
-        />
-        <Image
-          src={EcrevisseImage}
-          alt="Ecrevisse"
-          class="w-full h-full object-cover"
-        />
-      </div>
-    </SplitSection>
-    <SplitSection
-      title="La cueillette"
-      bgColor="#251715"
-      bgImage={TerroirImage}
-      isInverted
-    >
-      Inspiration quotidienne, dans son jus, le végétal s'exprime au gré du
-      temps, dans ses moindres mouvements, discret ou profus, libre d'être soi.
-      <video slot="right" class="w-full h-full object-cover" autoplay muted loop>
-        <source src={CueilletteChampignon} type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-    </SplitSection>
-    <SplitSection
-      title="Verre du terroir"
-      bgColor="#251715"
-      bgImage={TerroirImage}
-    >
-      <div slot="left" class="flex flex-col w-full h-full">
-        <div class="flex-1 flex items-center">
-          <div class="text-white p-8 md:p-16 max-w-xl text-lg leading-10">
-            <h2 class="uppercase font-bold text-5xl mb-4 font-changa">Verre du terroir</h2>
-            <p>
-              Explorer un territoire et rendre à la vigne la beauté des racines
-              locales, les cépages d'ici, écho aux flacons d'ailleurs, la
-              pertinence d'une équipe sommelière en totale cohérence.
-            </p>
-            <button
-              class="text-white border border-white px-4 py-2 transition duration-300 ease-in-out hover:bg-white hover:text-black mt-2"
-            >
-              <a href="/carte-des-vins.pdf" target="_blank">La carte des vins</a
-              >
-            </button>
-          </div>
-        </div>
-        <div class="flex-1">
-          <Image
-            src={CaveAVinImage}
-            alt="Mathieu Cellard Cave à vin"
-            style="object-cover w-full h-full"
-          />
+      <a href="/menu.pdf" target="_blank">Notre menu</a>
+    </button>
+    <div slot="right" class="grid grid-cols-2 grid-rows-2 w-full h-full">
+      <Image
+        src={Fenouille3Image}
+        alt="Fenouille"
+        class="w-full h-full object-cover"
+      />
+      <Image
+        src={Fenouille6Image}
+        alt="Fenouille"
+        class="w-full h-full object-cover"
+      />
+      <Image
+        src={LitAltesseImage}
+        alt="Lit d'altesse"
+        class="w-full h-full object-cover"
+      />
+      <Image
+        src={EcrevisseImage}
+        alt="Ecrevisse"
+        class="w-full h-full object-cover"
+      />
+    </div>
+  </SplitSection>
+  <SplitSection
+    title="La cueillette"
+    bgColor="#251715"
+    bgImage={TerroirImage}
+    isInverted
+  >
+    Inspiration quotidienne, dans son jus, le végétal s'exprime au gré du temps,
+    dans ses moindres mouvements, discret ou profus, libre d'être soi.
+    <video slot="right" class="w-full h-full object-cover" autoplay muted loop>
+      <source src={CueilletteChampignon} type="video/mp4" />
+       Your browser does not support the video tag.
+    </video>
+  </SplitSection>
+  <SplitSection
+    title="Verre du terroir"
+    bgColor="#251715"
+    bgImage={TerroirImage}
+  >
+    <div slot="left" class="flex flex-col w-full h-full">
+      <div class="flex-1 flex items-center">
+        <div class="text-white p-8 md:p-16 max-w-xl text-lg leading-10">
+          <h2 class="uppercase font-bold text-5xl mb-4 font-changa">
+            Verre du terroir
+          </h2>
+          <p>
+            Explorer un territoire et rendre à la vigne la beauté des racines
+            locales, les cépages d'ici, écho aux flacons d'ailleurs, la
+            pertinence d'une équipe sommelière en totale cohérence.
+          </p>
+          <button
+            class="text-white border border-white px-4 py-2 transition duration-300 ease-in-out hover:bg-white hover:text-black mt-2"
+          >
+            <a href="/carte-des-vins.pdf" target="_blank">La carte des vins</a>
+          </button>
         </div>
       </div>
-    </SplitSection>
-    <Footer />
-  </main>
+      <div class="flex-1">
+        <Image
+          src={CaveAVinImage}
+          alt="Mathieu Cellard Cave à vin"
+          style="object-cover w-full h-full"
+        />
+      </div>
+    </div>
+  </SplitSection>
 </Layout>
