@@ -1,0 +1,65 @@
+---
+import { Image } from "astro:assets";
+import SplitSection from "../SplitSection.astro"
+import Salle17Image from "../../assets/images/clos_des_sens_juin_2022_salle_17.jpg";
+import Salle17Image2 from "../../assets/images/clos_des_sens_matthieu_cellard_salle_17.jpg"
+import Salle85Image from "../../assets/images/clos_des_sens_matthieu_cellard_salle_85.jpg"
+---
+<SplitSection title="Un lieu" bgColor="#051528">
+  Univers singulier, identitaire et façonné par l'homme. Essences de bois
+  brulé, pierre de Savoie et cristal taillé, la salle, apaisante et épurée,
+  accueille l'authentique transparence réconfort.
+  <div slot="right" class="w-full h-full relative overflow-hidden">
+    <Image src={Salle17Image} alt="Salle 17" class="lieu-slide" />
+    <Image src={Salle85Image} alt="Salle 85" class="lieu-slide" />
+    <Image src={Salle17Image2} alt="Salle 17" class="lieu-slide" />
+  </div>
+</SplitSection>
+
+<style>
+  :root {
+    --slide-opacity: 0.5;
+  }
+
+  .lieu-slide {
+    position: absolute;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    animation: lieuSlideShow 18s infinite;
+  }
+
+
+  @keyframes lieuSlideShow {
+    0% {
+      right: -100%;
+    }
+    16.67% {
+      right: 0;
+    }
+    33.34% {
+      right: 0;
+    }
+    50% {
+      right: 100%;
+    }
+    100% {
+      right: 100%;
+    }
+  }
+
+  .lieu-slide:nth-child(1) {
+    animation-delay: -3s;
+  }
+
+  .lieu-slide:nth-child(2) {
+    animation-delay: 3s;
+  }
+
+  .lieu-slide:nth-child(3) {
+    animation-delay: 9s;
+  }
+</style>
