@@ -16,7 +16,6 @@ const { currentPage = "", bgImage = undefined } = Astro.props;
     ? ""
     : `background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${bgImage.src})`}
 >
-  <slot name="background-images" />
   <Header currentPage={currentPage} />
   <slot />
 </section>
