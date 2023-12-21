@@ -1,9 +1,9 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Hero from "../components/Hero.astro";
-import Lieu from "../components/Lieu.astro";
-import Location from "../components/Location.astro"
+import Location from "../components/Location.astro";
 import SplitSection from "../components/SplitSection.astro";
+import Salle85Image from "../assets/images/clos_des_sens_matthieu_cellard_salle_85.jpg";
 import HeroImage from "../assets/images/cortil_septembre_2017.jpg";
 import Ecrevisse2Image from "../assets/images/clos-des-sens-juillet-2023-plats-ecrevisse2.jpg";
 ---
@@ -21,7 +21,11 @@ import Ecrevisse2Image from "../assets/images/clos-des-sens-juillet-2023-plats-e
        3* Michelin Annecy
     </h1>
   </Hero>
-  <Lieu />
+  <SplitSection title="Un lieu" bgColor="#051528" bgImage={Salle85Image}>
+    Univers singulier, identitaire et façonné par l'homme. Essences de bois
+    brulé, pierre de Savoie et cristal taillé, la salle, apaisante et épurée,
+    accueille l'authentique transparence réconfort.
+  </SplitSection>
   <SplitSection
     title="Un moment"
     bgColor="#251715"

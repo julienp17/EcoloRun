@@ -1,6 +1,7 @@
 ---
-import { Image } from "astro:assets";
+import { Picture } from "astro:assets";
 import LocationImage from "../assets/images/13_rue_jean_mermoz_annecy.jpg";
+import LocationImageWeb from "../assets/images/13_rue_jean_mermoz_annecy_web.jpg";
 ---
 
 <a
@@ -8,8 +9,9 @@ import LocationImage from "../assets/images/13_rue_jean_mermoz_annecy.jpg";
   target="_blank"
   class="w-full h-full"
 >
-  <Image
-    src={LocationImage}
+  <Picture
+    src={LocationImageWeb}
+    formats={["avif", "webp"]}
     alt={"Adresse le pavillon gourmand. 13 rue jean mermoz"}
     class="w-full h-full object-cover"
   />

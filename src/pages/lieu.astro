@@ -1,9 +1,7 @@
 ---
-import { Image } from "astro:assets";
 import Layout from "../layouts/Layout.astro";
 import SplitSection from "../components/SplitSection.astro";
 import Hero from "../components/Hero.astro";
-import LieuComponent from "../components/Lieu.astro";
 import HeroImage from "../assets/images/reportage-portraits-cuisine-salle-46.jpg";
 import JardinImage from "../assets/images/clos-des-sens-juillet-2023-jardin-115.jpg";
 import ReceptionImage from "../assets/images/clos-des-sens-juillet-2023-reception-24.jpg";
@@ -15,7 +13,11 @@ import ChefImage from "../assets/images/Franck-Derouet.jpg";
   metadescription="Le pavillon gourmand, plus qu'un lieu. Découvrez les esprits engagés de notre inspiration quotidienne dans notre jardin."
 >
   <Hero currentPage="/lieu" bgImage={HeroImage} />
-  <LieuComponent />
+  <SplitSection title="Un lieu" bgColor="#051528" bgImage={ReceptionImage}>
+    Univers singulier, identitaire et façonné par l'homme. Essences de bois
+    brulé, pierre de Savoie et cristal taillé, la salle, apaisante et épurée,
+    accueille l'authentique transparence réconfort.
+  </SplitSection>
   <SplitSection
     title="Le jardin"
     bgColor="#051528"

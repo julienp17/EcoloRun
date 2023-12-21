@@ -3,7 +3,6 @@ import { Image } from "astro:assets";
 import Layout from "../layouts/Layout.astro";
 import Hero from "../components/Hero.astro";
 import SplitSection from "../components/SplitSection.astro";
-import TerroirImage from "../assets/images/clos_des_sens_juin_2022_salle_37.jpg";
 import Fenouille3Image from "../assets/images/clos-des-sens-juillet-2023-plats-fenouil3.jpg";
 import Fenouille6Image from "../assets/images/clos-des-sens-septembre-2021-plat-fenouille6.jpg";
 import LitAltesseImage from "../assets/images/le_clos_des_sens_juin_2022_plats_brochet_lie_d_altesse2.jpg";
@@ -19,7 +18,6 @@ import CueilletteChampignon from "../assets/videos/cueillette_champignon.mp4";
   <SplitSection
     title="Âme végétale et lacustre"
     bgColor="#251715"
-    bgImage={TerroirImage}
   >
     Reflet d'un garde-manger nourricier, la cuisine, brut et authentique dessine
     ses lignes dans ses courbes sauvages et charnelles sans contour.
@@ -39,12 +37,11 @@ import CueilletteChampignon from "../assets/videos/cueillette_champignon.mp4";
   <SplitSection
     title="La cueillette"
     bgColor="#251715"
-    bgImage={TerroirImage}
     isInverted
   >
     Inspiration quotidienne, dans son jus, le végétal s'exprime au gré du temps,
     dans ses moindres mouvements, discret ou profus, libre d'être soi.
-    <video slot="right" class="w-full h-full object-cover" autoplay muted loop>
+    <video slot="right" class="w-full h-full object-cover" controls muted loop>
       <source src={CueilletteChampignon} type="video/mp4" />
        Your browser does not support the video tag.
     </video>
@@ -52,7 +49,7 @@ import CueilletteChampignon from "../assets/videos/cueillette_champignon.mp4";
   <SplitSection
     title="Verre du terroir"
     bgColor="#251715"
-    bgImage={TerroirImage}
+    bgImage={CaveAVinImage}
   >
   <p>
     Explorer un territoire et rendre à la vigne la beauté des racines
