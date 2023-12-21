@@ -3,11 +3,12 @@ import Layout from "../layouts/Layout.astro";
 import SplitSection from "../components/SplitSection.astro";
 import Hero from "../components/Hero.astro";
 import HeroImage from "../assets/images/clos-des-sens-sept-2018-reportage-77.jpg";
-import ContactForm from "../components/ContactForm.astro";
 ---
 
-<Layout title="Contact | Le pavillon gourmand"
-  metadescription="Contactez nous par téléphone ou par email. Découvrez les horaires d'ouvertures de notre restaurant gastronomique à Annecy.">
+<Layout
+  title="Contact | Le pavillon gourmand"
+  metadescription="Contactez nous par téléphone ou par email. Découvrez les horaires d'ouvertures de notre restaurant gastronomique à Annecy."
+>
   <Hero currentPage="/contact" bgImage={HeroImage} />
   <SplitSection title="Accès" bgColor="#1E1E1E">
     13 rue Jean Mermoz
@@ -24,7 +25,6 @@ import ContactForm from "../components/ContactForm.astro";
       referrerpolicy="no-referrer-when-downgrade"></iframe>
   </SplitSection>
   <SplitSection title="Contact" bgColor="#000000">
-    <ContactForm slot="left" />
     <div
       slot="right"
       class="text-[#f2f2f2] p-8 md:p-16 max-w-xl text-lg leading-10"
@@ -32,6 +32,14 @@ import ContactForm from "../components/ContactForm.astro";
       <div class="mb-6">
         <h2 class="uppercase font-bold text-3xl mb-2">Nous contacter</h2>
         <a href="tel:+330450230790">Tél. : +33 (0)4 50 23 07 90</a>
+        <button
+          class="block text-white border border-white px-4 py-2 transition duration-300 ease-in-out hover:bg-white hover:text-black mt-2"
+        >
+          <a href="mailto:lepavillongourmand@gmail.com">Envoyer un email</a>
+        </button>
+        <p>
+          Merci de préciser votre nom, prénom, numéro de téléphone, ainsi que votre message.
+        </p>
       </div>
       <div>
         <h2 class="uppercase font-bold text-3xl mb-2">Services</h2>
