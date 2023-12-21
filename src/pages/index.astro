@@ -1,13 +1,46 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Lieu from "../components/Lieu.astro";
-import Hero from "../components/Homepage/Hero.astro";
-import Moment from "../components/Homepage/Moment.astro";
-import NousTrouver from "../components/Homepage/NousTrouver.astro";
+import Hero from "../components/Hero.astro";
+import SplitSection from "../components/SplitSection.astro";
+import HeroImage from "../assets/images/cortil_septembre_2017.jpg";
+import Ecrevisse2Image from "../assets/images/clos-des-sens-juillet-2023-plats-ecrevisse2.jpg";
 ---
 <Layout title="Le pavillon gourmand">
-  <Hero />
+  <Hero bgImage={HeroImage}>
+    <h1
+      class="uppercase text-white font-bold text-3xl absolute bottom-20 left-10 font-changa"
+    >
+      Restaurant
+      <br />
+       gastronomique
+      <br />
+       Végétal & lacustre
+      <br />
+       3* Michelin Annecy
+    </h1>
+  </Hero>
   <Lieu />
-  <Moment />
-  <NousTrouver />
+  <SplitSection
+    title="Un moment"
+    bgColor="#251715"
+    bgImage={Ecrevisse2Image}
+    isInverted
+  >
+    Par le prisme culinaire, entre pudeur et force vitale, le monde du vivant
+    s'exprime jusqu'à la quintessence. Sublimé, il livre son émotion ultime.
+  </SplitSection>
+  <SplitSection title="Nous trouver" bgColor="#142C08">
+    Un lieu unique dans un écrin de nature.
+    <iframe
+      slot="right"
+      title="Le pavillon gourmand emplacement"
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2775.6746100882024!2d6.1418481118441095!3d45.917815102938!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478b8f97b4101279%3A0x418b6fff14048374!2s13%20Rue%20Jean%20Mermoz%2C%2074940%20Annecy!5e0!3m2!1sfr!2sfr!4v1702720608987!5m2!1sfr!2sfr"
+      width="100%"
+      height="100%"
+      style="border:0;"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </SplitSection>
 </Layout>
