@@ -1,11 +1,13 @@
 ---
+import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 interface Props {
   title: string;
   metadescription?: string;
+  currentPage?: string;
 }
 
-const { title, metadescription } = Astro.props;
+const { title, metadescription, currentPage = "" } = Astro.props;
 ---
 
 <!doctype html>
@@ -25,7 +27,8 @@ const { title, metadescription } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body>
+  <body class="relative" >
+    <Header currentPage={currentPage} />
     <main>
       <slot />
     </main>

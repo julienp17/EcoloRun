@@ -3,23 +3,21 @@ import { Image } from "astro:assets";
 import Header from "./Header.astro";
 
 interface Props {
-  currentPage?: string;
   bgImage: ImageMetadata;
   bgImageMobile: ImageMetadata;
 }
 
-const { currentPage = "", bgImage, bgImageMobile } = Astro.props;
+const { bgImage, bgImageMobile } = Astro.props;
 ---
 
 <section
-  class="p-6 relative bg-cover bg-center w-full h-screen overflow-hidden"
+  class="p-6 md:p-10 relative bg-cover bg-center w-full h-screen overflow-hidden"
 >
   <picture>
     <source media="(max-width: 799px)" srcset={bgImageMobile.src} />
     <source media="(min-width: 800px)" srcset={bgImage.src} />
     <Image src={bgImage} alt="Background image" class="w-full h-full object-cover" />
   </picture>
-  <Header currentPage={currentPage} />
   <slot />
 </section>
 
