@@ -1,21 +1,34 @@
 ---
+import { Image } from "astro:assets";
 import Header from "./Header.astro";
 
 interface Props {
   currentPage?: string;
-  bgImage?: ImageMetadata;
+  bgImage: ImageMetadata;
+  bgImageMobile: ImageMetadata;
 }
 
-const { currentPage = "", bgImage = undefined } = Astro.props;
+const { currentPage = "", bgImage, bgImageMobile } = Astro.props;
 ---
 
 <section
-  id="hero"
   class="p-6 relative bg-cover bg-center w-full h-screen overflow-hidden"
-  style={bgImage === undefined
-    ? ""
-    : `background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${bgImage.src})`}
 >
+  <picture>
+    <source media="(max-width: 799px)" srcset={bgImageMobile.src} />
+    <source media="(min-width: 800px)" srcset={bgImage.src} />
+    <Image src={bgImage} alt="Background image" class="w-full h-full object-cover" />
+  </picture>
   <Header currentPage={currentPage} />
   <slot />
 </section>
+
+<style>
+  picture {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+</style>

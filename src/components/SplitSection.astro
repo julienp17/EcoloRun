@@ -9,11 +9,12 @@ interface Props {
 
 const { title, bgColor, bgImage = undefined, isInverted = false } = Astro.props;
 ---
+
 <section
   class="flex flex-col md:flex-row w-full h-screen"
   style=`background-color: ${bgColor}`
 >
-  <div class={`flex-1 flex items-center ${isInverted ? 'md:order-2' : ''}`}>
+  <div class={`flex-1 flex items-center ${isInverted ? "md:order-2" : ""}`}>
     {
       Astro.slots.has("left") ? (
         <slot name="left" />
@@ -25,12 +26,20 @@ const { title, bgColor, bgImage = undefined, isInverted = false } = Astro.props;
       )
     }
   </div>
-  <div class={`flex-1 flex items-center ${isInverted ? 'md:order-1' : ''}`}>
+  <div class={`flex-1 flex items-center ${isInverted ? "md:order-1" : ""}`}>
     {
       Astro.slots.has("right") ? (
         <slot name="right" />
-      ) : bgImage && (
-        <Image src={bgImage} alt={title} class="w-full h-full object-cover" />
+      ) : (
+        bgImage && (
+          <Image
+            src={bgImage}
+            alt={title}
+            widths={[414, bgImage.width]}
+            sizes={`(max-width: 560px) 414px, ${bgImage.width}px`}
+            class="w-full h-full object-cover"
+          />
+        )
       )
     }
   </div>

@@ -7,6 +7,8 @@ import Fenouille3Image from "../assets/images/clos-des-sens-juillet-2023-plats-f
 import Fenouille6Image from "../assets/images/clos-des-sens-septembre-2021-plat-fenouille6.jpg";
 import LitAltesseImage from "../assets/images/le_clos_des_sens_juin_2022_plats_brochet_lie_d_altesse2.jpg";
 import EcrevisseImage from "../assets/images/plats_ecrevisse_froide.jpg";
+import EcrevisseGradientImage from "../assets/images/plats_ecrevisse_froide_gradient.jpg";
+import EcrevisseMobileImage from "../assets/images/plats_ecrevisse_froide_mobile.jpg";
 import CaveAVinImage from "../assets/images/matthieu_cellard_cave_et_vin.jpg";
 import CueilletteChampignonMobileMP4 from "../assets/videos/cueillette_champignon_mobile.mp4";
 import CueillutteChampignonMobileWEBM from "../assets/videos/cueillette_champignon_mobile.webm";
@@ -18,7 +20,11 @@ import CueilletteChampignonWEBM from "../assets/videos/cueillette_champignon.web
   title="Un moment | Le pavillon gourmand"
   metadescription="Le pavillon gourmand, restaurant gastronomique à Annecy, vous propose un moment de détente et de plaisir dans un cadre exceptionnel."
 >
-  <Hero currentPage="/moment" bgImage={EcrevisseImage} />
+  <Hero
+    currentPage="/moment"
+    bgImage={EcrevisseGradientImage}
+    bgImageMobile={EcrevisseMobileImage}
+  />
   <SplitSection title="Âme végétale et lacustre" bgColor="#251715">
     Reflet d'un garde-manger nourricier, la cuisine, brut et authentique dessine
     ses lignes dans ses courbes sauvages et charnelles sans contour.
@@ -55,13 +61,21 @@ import CueilletteChampignonWEBM from "../assets/videos/cueillette_champignon.web
       class="w-full h-full object-cover"
       controls
       muted
-      preload="none"
+      preload="metadata"
     >
-      <source media="(max-width: 768px)" src={CueilletteChampignonMobileMP4} type="video/mp4" />
-      <source media="(max-width: 768px)" src={CueillutteChampignonMobileWEBM} type="video/webm" />
+      <source
+        media="(max-width: 768px)"
+        src={CueilletteChampignonMobileMP4}
+        type="video/mp4"
+      />
+      <source
+        media="(max-width: 768px)"
+        src={CueillutteChampignonMobileWEBM}
+        type="video/webm"
+      />
       <source src={CueilletteChampignonMP4} type="video/mp4" />
       <source src={CueilletteChampignonWEBM} type="video/webm" />
-       Your browser does not support the video tag.
+       Votre navigateur ne supporte pas la balise video.
     </video>
   </SplitSection>
   <SplitSection
