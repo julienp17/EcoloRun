@@ -12,9 +12,7 @@ import EcrevisseMobileImage from "../assets/images/plats_ecrevisse_froide_mobile
 import CaveAVinImage from "../assets/images/matthieu_cellard_cave_et_vin.jpg";
 import ChampignonPoster from "../assets/images/champignon_poster.jpg"
 import CueilletteChampignonMobileMP4 from "../assets/videos/cueillette_champignon_mobile.mp4";
-import CueillutteChampignonMobileWEBM from "../assets/videos/cueillette_champignon_mobile.webm";
-import CueilletteChampignonMP4 from "../assets/videos/cueillette_champignon.mp4";
-import CueilletteChampignonWEBM from "../assets/videos/cueillette_champignon.webm";
+import CueilletteChampignonMobileWEBM from "../assets/videos/cueillette_champignon_mobile.webm";
 import Button from "../components/Button.astro";
 ---
 
@@ -62,18 +60,8 @@ import Button from "../components/Button.astro";
       poster={ChampignonPoster.src}
       preload="none"
     >
-      <source
-        media="(max-width: 768px)"
-        src={CueilletteChampignonMobileMP4}
-        type="video/mp4"
-      />
-      <source
-        media="(max-width: 768px)"
-        src={CueillutteChampignonMobileWEBM}
-        type="video/webm"
-      />
-      <source src={CueilletteChampignonMP4} type="video/mp4" />
-      <source src={CueilletteChampignonWEBM} type="video/webm" />
+      <source src={CueilletteChampignonMobileMP4} type="video/mp4" />
+      <source src={CueilletteChampignonMobileWEBM} type="video/webm" />
        Votre navigateur ne supporte pas la balise video.
     </video>
   </SplitSection>
