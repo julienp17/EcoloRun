@@ -7,6 +7,7 @@ import HeroMobileImage from "../assets/images/reportage-portraits-cuisine-salle-
 import JardinImage from "../assets/images/clos-des-sens-juillet-2023-jardin-115.jpg";
 import ReceptionImage from "../assets/images/clos-des-sens-juillet-2023-reception-24.jpg";
 import ChefImage from "../assets/images/Franck-Derouet.jpg";
+import Button from "../components/Button.astro";
 ---
 
 <Layout
@@ -32,12 +33,8 @@ import ChefImage from "../assets/images/Franck-Derouet.jpg";
   <SplitSection title="Esprits engagés" bgColor="#051528" bgImage={ChefImage}>
     Épouser une identité unique, pousser jusqu'à l'ultime sa passion sensible et
     émotionnelle, curieuse et libre d'être.
-    <button
-      class="block text-white border border-white px-4 py-2 transition duration-300 ease-in-out hover:bg-white hover:text-black mt-2"
-    >
-      <a href="https://www.youtube.com/watch?v=uceaJ__FZg4" target="_blank"
-        >Découvrez notre reportage télévisé</a
-      >
-    </button>
+    <Button href="https://www.youtube.com/watch?v=uceaJ__FZg4" blank>
+      Découvrez notre reportage télévisé
+    </Button>
   </SplitSection>
 </Layout>

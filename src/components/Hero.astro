@@ -9,7 +9,7 @@ interface Props {
 const { bgImage, bgImageMobile } = Astro.props;
 ---
 
-<section
+<div
   class="p-6 md:p-10 relative bg-cover bg-center w-full h-screen overflow-hidden"
 >
   <picture>
@@ -18,7 +18,7 @@ const { bgImage, bgImageMobile } = Astro.props;
     <Image src={bgImage} alt="Background image" class="w-full h-full object-cover" />
   </picture>
   <slot />
-</section>
+</div>
 
 <style>
   picture {

@@ -15,6 +15,7 @@ import CueilletteChampignonMobileMP4 from "../assets/videos/cueillette_champigno
 import CueillutteChampignonMobileWEBM from "../assets/videos/cueillette_champignon_mobile.webm";
 import CueilletteChampignonMP4 from "../assets/videos/cueillette_champignon.mp4";
 import CueilletteChampignonWEBM from "../assets/videos/cueillette_champignon.webm";
+import Button from "../components/Button.astro";
 ---
 
 <Layout
@@ -27,11 +28,9 @@ import CueilletteChampignonWEBM from "../assets/videos/cueillette_champignon.web
     Reflet d'un garde-manger nourricier, la cuisine, brut et authentique dessine
     ses lignes dans ses courbes sauvages et charnelles sans contour.
     <br />
-    <button
-      class="text-white border border-white px-4 py-2 transition duration-300 ease-in-out hover:bg-white hover:text-black mt-2"
-    >
-      <a href="/menu.pdf" target="_blank">Notre menu</a>
-    </button>
+    <Button href="/menu.pdf">
+      Notre menu
+    </Button>
     <div slot="right" class="grid-container">
       <Image src={Fenouille3Image} alt="Fenouille" class="grid-item top-left" />
       <Image
@@ -88,11 +87,9 @@ import CueilletteChampignonWEBM from "../assets/videos/cueillette_champignon.web
       les cépages d'ici, écho aux flacons d'ailleurs, la pertinence d'une équipe
       sommelière en totale cohérence.
     </p>
-    <button
-      class="text-white border border-white px-4 py-2 transition duration-300 ease-in-out hover:bg-white hover:text-black mt-2"
-    >
-      <a href="/carte-des-vins.pdf" target="_blank">La carte des vins</a>
-    </button>
+    <Button href="/carte-des-vins.pdf" blank>
+      La carte des vins
+    </Button>
   </SplitSection>
 </Layout>
 
