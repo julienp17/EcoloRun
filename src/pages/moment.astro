@@ -10,6 +10,7 @@ import EcrevisseImage from "../assets/images/plats_ecrevisse_froide.jpg";
 import EcrevisseGradientImage from "../assets/images/plats_ecrevisse_froide_gradient.jpg";
 import EcrevisseMobileImage from "../assets/images/plats_ecrevisse_froide_mobile.jpg";
 import CaveAVinImage from "../assets/images/matthieu_cellard_cave_et_vin.jpg";
+import ChampignonPoster from "../assets/images/champignon_poster.jpg"
 import CueilletteChampignonMobileMP4 from "../assets/videos/cueillette_champignon_mobile.mp4";
 import CueillutteChampignonMobileWEBM from "../assets/videos/cueillette_champignon_mobile.webm";
 import CueilletteChampignonMP4 from "../assets/videos/cueillette_champignon.mp4";
@@ -57,8 +58,10 @@ import CueilletteChampignonWEBM from "../assets/videos/cueillette_champignon.web
       slot="right"
       class="w-full h-full object-cover"
       controls
+      loop
       muted
-      preload="metadata"
+      poster={ChampignonPoster.src}
+      preload="none"
     >
       <source
         media="(max-width: 768px)"
